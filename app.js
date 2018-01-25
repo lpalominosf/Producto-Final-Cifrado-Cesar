@@ -53,11 +53,10 @@ function cipher(wordCiphered) {
     if (wordToCipher.charCodeAt(i) >= 97 && wordToCipher.charCodeAt(i) <= 122) {
       word = (((wordToCipher.charCodeAt(i) - 97 + 33) % 26) + 97);
       encrypted += String.fromCharCode(word);
-    }
     /*
     *Cifrando Mayúsculas, su código ASCII está entre 65 y 90
     */
-    else if (wordToCipher.charCodeAt(i) >= 65 && wordToCipher.charCodeAt(i) <= 90) {
+    } else if (wordToCipher.charCodeAt(i) >= 65 && wordToCipher.charCodeAt(i) <= 90) {
       word = (((wordToCipher.charCodeAt(i) - 65 + 33) % 26) + 65);
       encrypted += String.fromCharCode(word);
     } else {
@@ -91,11 +90,10 @@ function descipher(wordToDescipher) {
     if (wordToDescipher.charCodeAt(i) >= 97 && wordToDescipher.charCodeAt(i) <= 122) {
       word = (((wordToDescipher.charCodeAt(i) - 122 - 33) % 26) + 122);
       decode += String.fromCharCode(word);
-    }
     /*
     *Descifrando Mayúsculas, su código ASCII está entre 65 y 90
     */
-    else if (wordToDescipher.charCodeAt(i) >= 65 && wordToDescipher.charCodeAt(i) <= 90) {
+    } else if (wordToDescipher.charCodeAt(i) >= 65 && wordToDescipher.charCodeAt(i) <= 90) {
       word = (((wordToDescipher.charCodeAt(i) - 90 - 33) % 26) + 90);
       decode += String.fromCharCode(word);
     } else {
